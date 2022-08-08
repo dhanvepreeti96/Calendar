@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;    
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: url(../images/lumitar-TGexxIZAIN4-unsplash\ -\ Copy\ -\ Copy.jpg) no-repeat center center/cover;
+}
+
+
+.calendar{
+     width: 600px;
+    background-color: transparent;
+    box-shadow: 7px 7px 15px rgba(210, 131, 226, 0.699);
+    border-top: 1px solid rgba(197, 46, 228, 0.699);
+    border-left: 1px solid rgba(197, 46, 228, 0.699);
+}
+
+.month{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width:100%;
+    height: 100px;
+    background-color: transparent;
+    color:rgb(90, 5, 90);
+    padding: 40px 30px;
+}
+.month h2{
+    font-size: 1.3rem;
+    font-style: oblique;
+}
+
+.weekdays{
+    display: flex;
+    background-color: rgba(210, 131, 226, 0.699);
+    color: white;
+    padding:7px 0;
+}
+
+.weekdays div{
+    width: 14.28%;
+    text-align: center;
+}
+.days{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-weight: 300;
+    padding: 10px 0px;
+    color:rgb(90, 5, 90);
+    
+}
+.days div{
+    width:14.28%;
+    margin-bottom: 10px;
+    padding: 10px 0px;
+    transition: all 0.4s;
+    border-top-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+.days div:hover{
+    border:1.5px;
+    border-color: rgba(206, 35, 240, 0.938);
+    border-style:groove;
+    cursor: pointer;
+}
+
+.today{
+    background-color:rgb(90, 5, 90);
+    color:white;
+
+}
+.prev_date{
+    color: rgb(207, 57, 221);
+}
+#month{
+    font-size: 30px;
+    font-weight: 500;
+}
+.prev,.next{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    width:50px;
+    height: 50px;
+    background-color: rgba(171, 118, 233, 0.1);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+.prev:hover,.next:hover{
+    background-color: rgba(171, 118, 233, 0.3);
+    cursor: pointer;
+}
+
+/* Alarm */
+
+.alarm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 480px ;
+    width:480px;
+    border-radius: 50%;
+    border:1px solid rgba(90, 5, 90, 0.76);
+    background-color: transparent;
+    box-shadow: 7px 7px 15px rgba(210, 131, 226, 0.699);
+    padding: 30px 30px 38px;
+}
+.alarm img{
+    max-width: 103px;
+}
+#Titleclock{
+    margin-top:-37px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    opacity: 1;
+    color:rgba(90, 5, 90, 0.76) ;
+    font-weight: bold;
+}
+.alarm h1{
+    font-size: 50px;
+    font-weight: 500;
+    margin:30px 0;
+    color: rgb(90, 5, 90);
+}
+.content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.alarm .content.disable{
+    opacity:0.6;
+    pointer-events:none;
+}
+.content .column{
+    border-radius: 5px;
+    padding:0 10px;
+    border:1px solid rgb(90, 5, 90);
+    background-color: white;
+    width: calc(100% /3 - 5px);
+}
+.column select{
+    outline:none;
+    border:none;
+    height:53px;
+    width:100%;
+    font-size:19px;
+    color: rgb(90, 5, 90);
+}
+.alarm button{
+    height: 150px;
+    width:170px;
+    outline:none;
+    border:none;
+    margin-top:20px;
+    font-size: 20px;
+    padding:15px 0;
+    border-radius: 50%;
+    background: rgb(90, 5, 90);
+    color: white;
+    cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.alarm button:hover{
+    background-color: rgba(210, 131, 226, 0.699);
+    color: rgb(90, 5, 90);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    border: 1px solid rgb(90, 5, 90);
+}
+#gifImage{
+    height: 110px;
+    width:150px;
+    margin-top:3px;
+    margin-bottom: 17px;
+    padding-right: 8px;
+    opacity:0;
+    transition: opacity 0.2s ease-in
+}

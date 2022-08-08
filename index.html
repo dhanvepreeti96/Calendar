@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body onload="RenderDate()">
+    <div class="container">
+        <div class="calendar">
+            <div class="month">
+                <div class="prev" onclick="moveDate('prev')">
+                    <span>&#10094</span>
+                </div>
+                <div>
+                    <h2 id="month"></h2>
+                   <p id="date_str"></p>
+                </div>
+                <div class="next" onclick="moveDate('next')">
+                    <span>&#10095</span>
+                </div>
+            </div>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div class="days"> 
+            </div>
+        </div>
+        <div class="alarm">
+            <div class="alarmgif">
+            <img src="./images/6kc.gif" id="gifImage"  alt="alarm">
+            </div>
+            <div id="Titleclock">Alarm Clock</div>
+            <h1>00:00:00 PM</h1>
+            <div class="content">
+                <div class="column">
+                    <select>
+                        <option value="Hour" selected hidden>Hour</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <select>
+                        <option value="Minute" selected hidden>Minute</option>
+                    </select>
+                </div>
+                <div class="column">
+                    <select>
+                        <option value="AM/PM" selected hidden>AM/PM</option>
+                    </select>
+                </div>
+            </div>
+            <button>Set Alarm</button>
+        </div>
+        <audio id="ring">
+            <source src="./ringtone/twirling-intime-lenovo-k8-note-alarm-tone-41440.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script src="./js/Javascript.js"></script>
+</body>
+</html>
